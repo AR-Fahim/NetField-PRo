@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/nf_surface">
+
+    <!-- Top bar / header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1">
+
+        <TextView
+            android:id="@+id/text_screen_title"
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/nf_on_surface"
+            android:text="@string/screen_s10_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_done"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_min"
+            android:minHeight="@dimen/touch_min"
+            android:minWidth="@dimen/touch_min"
+            android:text="@string/btn_done"
+            android:contentDescription="@string/btn_done" />
+    </LinearLayout>
+
+    <!-- Read-only banner when session is finalized -->
+    <TextView
+        android:id="@+id/banner_read_only"
+        style="@style/TextAppearance.NF.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nf_background"
+        android:textColor="@color/nf_on_surface_variant"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1"
+        android:text="@string/finalized_read_only"
+        android:visibility="gone" />
+
+    <!-- Mode toggle: Boundary | Walls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mode_boundary"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/mode_boundary"
+                android:contentDescription="@string/mode_boundary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mode_walls"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/mode_walls"
+                android:contentDescription="@string/mode_walls" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </LinearLayout>
+
+    <!-- PlanView container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.netfieldpro.ui.plan.PlanView
+            android:id="@+id/plan_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Boundary controls: [Fit rectangle] [Draw] [Clear] -->
+    <LinearLayout
+        android:id="@+id/layout_boundary_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_fit_rectangle"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/touch_min"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_1"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/btn_fit_rectangle"
+            android:contentDescription="@string/btn_fit_rectangle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_draw_boundary"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/touch_min"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_1"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/btn_draw_boundary"
+            android:contentDescription="@string/btn_draw_boundary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear_boundary"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/touch_min"
+            android:layout_weight="1"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/btn_clear_boundary"
+            android:contentDescription="@string/btn_clear_boundary" />
+    </LinearLayout>
+
+    <!-- Walls controls: material chips + [Finish] [Undo] -->
+    <LinearLayout
+        android:id="@+id/layout_walls_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_materials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_drywall"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:checked="true"
+                    android:text="@string/material_drywall"
+                    android:contentDescription="@string/material_drywall" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_glass"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:text="@string/material_glass"
+                    android:contentDescription="@string/material_glass" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_brick"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:text="@string/material_brick"
+                    android:contentDescription="@string/material_brick" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_concrete"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:text="@string/material_concrete"
+                    android:contentDescription="@string/material_concrete" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_metal"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:text="@string/material_metal"
+                    android:contentDescription="@string/material_metal" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="@dimen/space_1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_finish_wall"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:layout_marginEnd="@dimen/space_2"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:enabled="false"
+                android:text="@string/btn_finish_wall"
+                android:contentDescription="@string/btn_finish_wall" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_undo_wall"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/btn_undo_wall"
+                android:contentDescription="@string/btn_undo_wall" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Status line -->
+    <TextView
+        android:id="@+id/text_status"
+        style="@style/TextAppearance.NF.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_2"
+        android:paddingVertical="@dimen/space_1"
+        android:textColor="@color/nf_on_surface_variant"
+        android:text="@string/status_no_boundary" />
+
+</LinearLayout>

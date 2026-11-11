@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.netfieldpro.ui.TierBadgeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tier_badge_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/tier_free"
+    android:contentDescription="@string/tier_badge_desc" />
+

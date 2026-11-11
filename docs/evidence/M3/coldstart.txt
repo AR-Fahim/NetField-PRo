@@ -1,0 +1,22 @@
+model=vivo 1906
+sdk=30
+ro.kernel.qemu=
+DEVICE_CLASS=PHYSICAL
+Starting cold-start measurement (10 runs)...
+Run 1: 788 ms
+Run 2: 652 ms
+Run 3: 627 ms
+Run 4: 659 ms
+Run 5: 651 ms
+Run 6: 642 ms
+Run 7: 632 ms
+Run 8: 658 ms
+Run 9: 634 ms
+Run 10: 633 ms
+----------------------------------------
+All 10 runs: 788 652 627 659 651 642 632 658 634 633
+Sorted runs: 627 632 633 634 642 651 652 658 659 788
+Median TotalTime: 646 ms
+Max TotalTime:    788 ms
+----------------------------------------
+Cold start PASS: Median (646 ms) <= 2000 ms budget.

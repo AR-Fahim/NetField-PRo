@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_050">4dp</dimen>
+    <dimen name="space_1">8dp</dimen>
+    <dimen name="space_2">16dp</dimen>
+    <dimen name="space_3">24dp</dimen>
+    <dimen name="space_4">32dp</dimen>
+    <dimen name="touch_min">48dp</dimen>
+    <dimen name="touch_primary">56dp</dimen>
+    <dimen name="bottom_bar">72dp</dimen>
+    <dimen name="radius_card">12dp</dimen>
+    <dimen name="radius_chip">8dp</dimen>
+    <dimen name="radius_sheet">24dp</dimen>
+    <dimen name="stroke">1dp</dimen>
+    <integer name="motion_short_ms">150</integer>
+    <integer name="motion_medium_ms">200</integer>
+</resources>
+

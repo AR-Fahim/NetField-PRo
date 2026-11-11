@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NetField" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nf_primary</item>
+        <item name="colorSecondary">@color/nf_primary</item>
+        <item name="colorOnPrimary">@color/nf_on_primary</item>
+        <item name="colorOnSecondary">@color/nf_on_primary</item>
+        <item name="colorPrimaryContainer">@color/nf_primary_container</item>
+        <item name="colorSecondaryContainer">@color/nf_primary_container</item>
+        <item name="android:colorBackground">@color/nf_background</item>
+        <item name="colorSurface">@color/nf_surface</item>
+
+        <item name="colorOnBackground">@color/nf_on_surface</item>
+        <item name="colorOnSurface">@color/nf_on_surface</item>
+        <item name="colorOnSecondaryContainer">@color/nf_on_surface</item>
+
+        <item name="colorOnSurfaceVariant">@color/nf_on_surface_variant</item>
+        <item name="colorOutline">@color/nf_outline</item>
+
+        <item name="colorError">@color/nf_error</item>
+
+        <item name="nfColorWarning">@color/nf_warning</item>
+        <item name="nfColorInfo">@color/nf_info</item>
+
+        <item name="materialCardViewStyle">@style/Widget.NF.CardView</item>
+    </style>
+
+    <style name="Widget.NF.CardView" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">@dimen/stroke</item>
+        <item name="strokeColor">@color/nf_outline</item>
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+    </style>
+</resources>
+

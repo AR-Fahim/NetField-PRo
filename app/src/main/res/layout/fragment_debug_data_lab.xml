@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_2">
+
+        <TextView
+            style="@style/TextAppearance.NF.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debug_data_lab_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_demo"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/data_lab_create_demo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_seed_demo_pass"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/seed_demo_pass" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_seed_demo_fail"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/seed_demo_fail" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_seed_latest_pass"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/seed_latest_pass" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_seed_latest_fail"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/seed_latest_fail" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_export_json"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/data_lab_export_json" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete_demo"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/data_lab_delete_demo" />
+
+        <TextView
+            android:id="@+id/text_export_info"
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:padding="@dimen/space_1"
+            android:background="?attr/colorSurfaceVariant"
+            android:typeface="monospace"
+            android:text="@string/data_lab_export_info_placeholder" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:text="@string/data_lab_counts_title" />
+
+        <TableLayout
+            android:id="@+id/table_counts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:stretchColumns="1">
+
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_project" />
+                <TextView android:id="@+id/count_project" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_floor" />
+                <TextView android:id="@+id/count_floor" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_survey_session" />
+                <TextView android:id="@+id/count_survey_session" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_device_info" />
+                <TextView android:id="@+id/count_device_info" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_scan" />
+                <TextView android:id="@+id/count_scan" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_raw_sample" />
+                <TextView android:id="@+id/count_raw_sample" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_survey_point" />
+                <TextView android:id="@+id/count_survey_point" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_measurement" />
+                <TextView android:id="@+id/count_measurement" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_latency_result" />
+                <TextView android:id="@+id/count_latency_result" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_link_sample" />
+                <TextView android:id="@+id/count_link_sample" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_connection_event" />
+                <TextView android:id="@+id/count_connection_event" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_path_segment" />
+                <TextView android:id="@+id/count_path_segment" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_access_point_marker" />
+                <TextView android:id="@+id/count_access_point_marker" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_target_network" />
+                <TextView android:id="@+id/count_target_network" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_ap_group" />
+                <TextView android:id="@+id/count_ap_group" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_floor_boundary" />
+                <TextView android:id="@+id/count_floor_boundary" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_wall" />
+                <TextView android:id="@+id/count_wall" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_wall_material" />
+                <TextView android:id="@+id/count_wall_material" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_requirement_profile" />
+                <TextView android:id="@+id/count_requirement_profile" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+            <TableRow>
+                <TextView style="@style/TextAppearance.NF.Body" android:text="@string/table_assessment" />
+                <TextView android:id="@+id/count_assessment" style="@style/TextAppearance.NF.Body" android:gravity="end" android:text="@string/data_lab_export_info_placeholder" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
+

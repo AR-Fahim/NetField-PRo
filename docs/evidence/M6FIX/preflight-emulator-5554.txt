@@ -1,0 +1,3 @@
+PREFLIGHT emulator-5554 model=sdk_gphone_x86_64 sdk=30 class=EMULATOR
+PREFLIGHT wifi=enabled connected=yes
+PREFLIGHT location_mode=3 throttle_setting=null wakefulness=Awake

@@ -1,0 +1,3 @@
+# Allowlist for core architecture rules
+# Exceptions go here with a justification line
+

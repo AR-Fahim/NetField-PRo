@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nf_primary">#6FD39A</color>
+    <color name="nf_on_primary">#00391C</color>
+    <color name="nf_primary_container">#03432A</color>
+    <color name="nf_background">#0F1412</color>
+    <color name="nf_surface">#171D1A</color>
+    <color name="nf_on_surface">#E6ECE9</color>
+    <color name="nf_on_surface_variant">#A9B5AF</color>
+    <color name="nf_outline">#3C4742</color>
+    <color name="nf_error">#F2B8B5</color>
+    <color name="nf_warning">#F0C36D</color>
+    <color name="nf_info">#9CC4F0</color>
+</resources>
+

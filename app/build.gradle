@@ -1,0 +1,122 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+import groovy.json.JsonSlurper
+
+def fbProject = ""
+def fbAppId = ""
+def fbKey = ""
+
+def gsFile = file("src/gated/google-services.json")
+if (gsFile.exists()) {
+    try {
+        def json = new JsonSlurper().parse(gsFile)
+        fbProject = json?.project_info?.project_id ?: ""
+        def targetClient = json?.client?.find { it?.client_info?.android_client_info?.package_name == "com.netfieldpro" }
+        if (targetClient != null) {
+            fbAppId = targetClient?.client_info?.mobilesdk_app_id ?: ""
+            fbKey = targetClient?.api_key ? (targetClient.api_key[0]?.current_key ?: "") : ""
+        }
+    } catch (Exception ignored) {
+    }
+}
+
+android {
+    namespace 'com.netfieldpro'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.netfieldpro'
+        minSdk 30
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    flavorDimensions "auth"
+    productFlavors {
+        open {
+            dimension "auth"
+            buildConfigField "boolean", "AUTH_FIREBASE", "false"
+        }
+        gated {
+            dimension "auth"
+            buildConfigField "boolean", "AUTH_FIREBASE", "true"
+            buildConfigField "String", "FB_PROJECT_ID", "\"${fbProject}\""
+            buildConfigField "String", "FB_APP_ID",     "\"${fbAppId}\""
+            buildConfigField "String", "FB_API_KEY",    "\"${fbKey}\""
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    testOptions {
+        animationsDisabled = true
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+tasks.register("testDebugUnitTest") {
+    dependsOn "testOpenDebugUnitTest", "testGatedDebugUnitTest"
+}
+
+dependencies {
+    implementation project(':core')
+
+    implementation 'com.google.zxing:core:3.5.3'
+
+    gatedImplementation platform('com.google.firebase:firebase-bom:33.7.0')
+    gatedImplementation 'com.google.firebase:firebase-auth'
+
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.lifecycle.livedata
+
+    implementation libs.androidx.room.runtime
+    annotationProcessor libs.androidx.room.compiler
+
+    testImplementation libs.junit
+    testImplementation libs.robolectric
+    testImplementation libs.androidx.junit
+    testImplementation libs.androidx.room.testing
+    testImplementation testFixtures(project(':core'))
+
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    androidTestImplementation libs.androidx.espresso.contrib
+    androidTestImplementation libs.androidx.espresso.accessibility
+}
+

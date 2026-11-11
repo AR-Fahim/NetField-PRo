@@ -1,0 +1,10 @@
+--------- beginning of main
+11-10 11:52:05.801 24373 24399 I NF_FACT : latency.method=ICMP
+11-10 11:52:05.801 24373 24399 I NF_FACT : latency.target=gateway
+11-10 11:52:05.801 24373 24399 I NF_FACT : latency.outcome=OK
+--------- beginning of system
+11-10 11:52:54.468 24373 24399 I NF_FACT : scan.first_batch_ms=1296
+11-10 11:52:54.468 24373 24399 I NF_FACT : scan.tier=CALLBACK
+11-10 11:52:54.468 24373 24399 I NF_FACT : scan.rows=1
+11-10 11:52:54.468 24373 24399 I NF_FACT : scan.updated=true
+11-10 11:52:54.468 24373 24399 I NF_FACT : scan.degraded=false

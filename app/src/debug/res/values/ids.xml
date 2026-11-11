@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="row_debug_reset_onboarding" type="id" />
+    <item name="switch_diag_record" type="id" />
+    <item name="switch_diag_force_poll" type="id" />
+    <item name="text_diag_record_path" type="id" />
+    <item name="layout_debug_diag_record" type="id" />
+</resources>

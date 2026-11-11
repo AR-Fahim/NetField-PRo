@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+    id 'java-test-fixtures'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
+dependencies {
+    testImplementation libs.junit
+}
+
+tasks.register('verifyCoreDeps') {
+    dependsOn configurations.runtimeClasspath
+    doLast {
+        def deps = configurations.runtimeClasspath.incoming.resolutionResult.allDependencies
+        if (!deps.isEmpty()) {
+            throw new GradleException(":core runtimeClasspath must have zero dependencies, but found: " + deps)
+        }
+    }
+}
+
+test.dependsOn(verifyCoreDeps)
+
+

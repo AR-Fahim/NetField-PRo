@@ -1,0 +1,4 @@
+verify=0
+verify-device=0
+vectors=0
+selftest=0

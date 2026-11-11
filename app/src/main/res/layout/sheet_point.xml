@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sheet_point"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:padding="@dimen/space_3">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_2"
+        android:background="?attr/colorOutlineVariant" />
+
+    <!-- Title and Quality Chip Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/text_point_title"
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?attr/colorOnSurface"
+            android:text="@string/point_title_default" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_quality"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_min"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/point_quality_ok" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.NF.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:text="@string/point_measurements_header"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+    <!-- List of BSSIDs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_point_bssids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_1"
+        android:nestedScrollingEnabled="true" />
+
+    <!-- Delete Point Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_point_delete"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_primary"
+        android:minHeight="@dimen/touch_min"
+        android:layout_marginTop="@dimen/space_3"
+        android:textColor="?attr/colorError"
+        app:strokeColor="?attr/colorError"
+        android:text="@string/btn_point_delete" />
+
+</LinearLayout>
+

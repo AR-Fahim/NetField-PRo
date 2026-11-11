@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nf_heat_tl_1">#D73027</color>
+    <color name="nf_heat_tl_2">#FC8D59</color>
+    <color name="nf_heat_tl_3">#FEE08B</color>
+    <color name="nf_heat_tl_4">#91CF60</color>
+    <color name="nf_heat_tl_5">#1A9850</color>
+
+    <color name="nf_heat_vi_1">#440154</color>
+    <color name="nf_heat_vi_2">#3B528B</color>
+    <color name="nf_heat_vi_3">#21908C</color>
+    <color name="nf_heat_vi_4">#5DC863</color>
+    <color name="nf_heat_vi_5">#FDE725</color>
+</resources>

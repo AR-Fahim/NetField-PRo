@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_s02">
+
+    <include app:graph="@navigation/nav_auth_slot" />
+
+    <action
+        android:id="@+id/action_global_paywall"
+        app:destination="@id/nav_s18">
+        <argument
+            android:name="feature"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="quota"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </action>
+
+    <fragment
+        android:id="@+id/nav_s01"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s01_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S01" />
+        <action
+            android:id="@+id/action_s01_to_s02"
+            app:destination="@id/nav_s02"
+            app:popUpTo="@id/nav_s01"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_s01_to_s17"
+            app:destination="@id/nav_s17" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s02"
+        android:name="com.netfieldpro.ui.projects.ProjectsFragment"
+        android:label="@string/screen_s02_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S02" />
+        <action
+            android:id="@+id/action_s02_to_s03"
+            app:destination="@id/nav_s03" />
+        <action
+            android:id="@+id/action_s02_to_s17"
+            app:destination="@id/nav_s17" />
+        <action
+            android:id="@+id/action_s02_to_s18"
+            app:destination="@id/nav_s18" />
+        <action
+            android:id="@+id/action_s02_to_s19"
+            app:destination="@id/nav_s19" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s03"
+        android:name="com.netfieldpro.ui.projects.ProjectDetailFragment"
+        android:label="@string/screen_s03_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S03" />
+        <argument
+            android:name="projectId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s03_to_s04"
+            app:destination="@id/nav_s04" />
+        <action
+            android:id="@+id/action_s03_to_s06"
+            app:destination="@id/nav_s06" />
+        <action
+            android:id="@+id/action_s03_to_s09"
+            app:destination="@id/nav_s09" />
+        <action
+            android:id="@+id/action_s03_to_s14"
+            app:destination="@id/nav_s14" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s04"
+        android:name="com.netfieldpro.ui.plan.FloorImportFragment"
+        android:label="@string/screen_s04_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S04" />
+        <argument
+            android:name="projectId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s04_to_s05"
+            app:destination="@id/nav_s05" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s05"
+        android:name="com.netfieldpro.ui.plan.ScaleFragment"
+        android:label="@string/screen_s05_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S05" />
+        <argument
+            android:name="floorId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s06"
+        android:name="com.netfieldpro.ui.survey.NewSurveyFragment"
+        android:label="@string/screen_s06_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S06" />
+        <argument
+            android:name="floorId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s06_to_s07"
+            app:destination="@id/nav_s07" />
+        <action
+            android:id="@+id/action_s06_to_s18"
+            app:destination="@id/nav_s18" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s07"
+        android:name="com.netfieldpro.ui.survey.SurveyFragment"
+        android:label="@string/screen_s07_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S07" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s07_to_s08"
+            app:destination="@id/nav_s08" />
+        <action
+            android:id="@+id/action_s07_to_s09"
+            app:destination="@id/nav_s09" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_s08"
+        android:name="com.netfieldpro.ui.survey.PointDetailSheetFragment"
+        android:label="@string/screen_s08_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S08" />
+        <argument
+            android:name="pointId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/nav_s09"
+        android:name="com.netfieldpro.ui.heatmap.HeatmapFragment"
+        android:label="@string/screen_s09_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S09" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s09_to_s10"
+            app:destination="@id/nav_s10" />
+        <action
+            android:id="@+id/action_s09_to_s11"
+            app:destination="@id/nav_s11" />
+        <action
+            android:id="@+id/action_s09_to_s12"
+            app:destination="@id/nav_s12" />
+        <action
+            android:id="@+id/action_s09_to_s13"
+            app:destination="@id/nav_s13" />
+        <action
+            android:id="@+id/action_s09_to_s18"
+            app:destination="@id/nav_s18" />
+        <action
+            android:id="@+id/action_s09_to_s21"
+            app:destination="@id/nav_s21" />
+        <action
+            android:id="@+id/action_s09_to_s16"
+            app:destination="@id/nav_s16" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s10"
+        android:name="com.netfieldpro.ui.geometry.BoundaryWallsFragment"
+        android:label="@string/screen_s10_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S10" />
+        <argument
+            android:name="floorId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s11"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s11_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S11" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s12"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s12_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S12" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s13"
+        android:name="com.netfieldpro.ui.finalize.FinalizeFragment"
+        android:label="@string/screen_s13_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S13" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s13_to_s15"
+            app:destination="@id/nav_s15" />
+        <action
+            android:id="@+id/action_s13_to_s18"
+            app:destination="@id/nav_s18" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s14"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s14_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S14" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s14_to_s15"
+            app:destination="@id/nav_s15" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s15"
+        android:name="com.netfieldpro.ui.assessment.AssessmentFragment"
+        android:label="@string/screen_s15_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S15" />
+        <argument
+            android:name="assessmentId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s15_to_s16"
+            app:destination="@id/nav_s16" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s16"
+        android:name="com.netfieldpro.ui.report.ReportFragment"
+        android:label="@string/screen_s16_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S16" />
+        <argument
+            android:name="assessmentId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_s16_to_s18"
+            app:destination="@id/nav_s18" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s17"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s17_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S17" />
+        <argument
+            android:name="uri"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s18"
+        android:name="com.netfieldpro.paywall.PaywallFragment"
+        android:label="@string/screen_s18_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S18" />
+        <argument
+            android:name="feature"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="quota"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s19"
+        android:name="com.netfieldpro.settings.SettingsFragment"
+        android:label="@string/screen_s19_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S19" />
+        <action
+            android:id="@+id/action_s19_to_s18"
+            app:destination="@id/nav_s18" />
+        <action
+            android:id="@+id/action_s19_to_s20"
+            app:destination="@id/nav_s20" />
+        <action
+            android:id="@+id/action_s19_to_s21"
+            app:destination="@id/nav_s21" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s20"
+        android:name="com.netfieldpro.ui.diagnostics.DiagnosticsFragment"
+        android:label="@string/screen_s20_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S20" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_s21"
+        android:name="com.netfieldpro.ui.placeholder.PlaceholderFragment"
+        android:label="@string/screen_s21_title">
+        <argument
+            android:name="screenId"
+            app:argType="string"
+            android:defaultValue="S21" />
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_debug_menu"
+        android:name="com.netfieldpro.ui.debug.DebugMenuFragment"
+        android:label="@string/debug_menu_title" />
+
+    <fragment
+        android:id="@+id/nav_style_guide"
+        android:name="com.netfieldpro.ui.debug.StyleGuideFragment"
+        android:label="@string/style_guide_title" />
+
+    <fragment
+        android:id="@+id/nav_debug_data_lab"
+        android:name="com.netfieldpro.ui.debug.DebugDataLabFragment"
+        android:label="@string/debug_data_lab_title" />
+
+    <fragment
+        android:id="@+id/nav_debug_gate_lab"
+        android:name="com.netfieldpro.ui.debug.DebugGateLabFragment"
+        android:label="@string/gatelab_title" />
+
+    <fragment
+        android:id="@+id/nav_debug_plan_lab"
+        android:name="com.netfieldpro.ui.debug.PlanViewLabFragment"
+        android:label="@string/debug_plan_lab_title" />
+
+</navigation>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="nf_entitlement.xml"/>
+        <exclude domain="sharedpref" path="nf_onboarding.xml"/>
+        <exclude domain="sharedpref" path="nf_session_runtime.xml"/>
+        <exclude domain="sharedpref" path="FirebaseHeartBeatW0RFRkFVTFRd+MTo5NjE5MTI0Nzk4NTE6YW5kcm9pZDpmZmZlNGRlMzM1OGQ5ZDQ2ZWYxMTJl.xml"/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="nf_entitlement.xml"/>
+        <exclude domain="sharedpref" path="nf_onboarding.xml"/>
+        <exclude domain="sharedpref" path="nf_session_runtime.xml"/>
+        <exclude domain="sharedpref" path="FirebaseHeartBeatW0RFRkFVTFRd+MTo5NjE5MTI0Nzk4NTE6YW5kcm9pZDpmZmZlNGRlMzM1OGQ5ZDQ2ZWYxMTJl.xml"/>
+    </device-transfer>
+</data-extraction-rules>

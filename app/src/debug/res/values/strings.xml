@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="paywall_dev_simulate">[DEV] Simulate %1$s purchase</string>
+    <string name="gatelab_title">Feature gate lab</string>
+    <string name="gatelab_try">Try</string>
+    <string name="gatelab_allowed">✓ Allowed</string>
+    <string name="gatelab_na">— n/a</string>
+    <string name="gatelab_try_result">Allowed: %1$s</string>
+    <string name="debug_reset_onboarding">Reset onboarding</string>
+    <string name="diag_dev_record">[DEV] Record trace</string>
+    <string name="diag_force_poll">Force POLL scan method (debug)</string>
+</resources>
+

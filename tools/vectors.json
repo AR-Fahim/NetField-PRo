@@ -1,0 +1,291 @@
+{
+  "CJ-1": "{\"a\":2,\"b\":1}",
+  "CJ-2": "7B22F09F9880223A312C22EFBD9E223A327D",
+  "CJ-3": {
+    "v1": 9007199254740991,
+    "v2": "\"9007199254740992\"",
+    "v3": "\"-9007199254740992\""
+  },
+  "CJ-4": {
+    "v1": "0.12",
+    "v2": "0.38",
+    "v3": "2.67",
+    "v4": "0.00",
+    "v5": "0.000"
+  },
+  "CJ-5": "\"a\\\"b\\\\c\\u0001\\n\\u007f\\u2028\"",
+  "CJ-6": {
+    "v1": "{\"b\":1}",
+    "v2": "{}",
+    "v3": "[]"
+  },
+  "HA-1": {
+    "hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "b64url": "47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"
+  },
+  "HA-2": {
+    "hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  "HA-3": {
+    "hex": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "DER-1": "00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002",
+  "DER-2": "00000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000081",
+  "DER-3": "INVALID_SIGNATURE",
+  "MD-1": -61.5,
+  "MD-2": {
+    "v1": -61.0,
+    "v2": -70.0
+  },
+  "IM-1": {
+    "imputed_C": -95.0,
+    "not_imputed_B": false,
+    "ssid_best": -61.0
+  },
+  "SW-1": [2412, 2437, 2462, 5180, 5200, 5745],
+  "SW-2": {
+    "sweep6": "FULL",
+    "sweep5": "PARTIAL"
+  },
+  "SW-3": {
+    "sweep_a": "FULL",
+    "sweep_b": "PARTIAL"
+  },
+  "FR-1": {
+    "v1": "stale",
+    "v2": "fresh"
+  },
+  "P95-1": {
+    "rank": 10,
+    "val": 90
+  },
+  "P95-2": {
+    "rank": 19,
+    "val": 19
+  },
+  "P95-3": {
+    "rank": 20,
+    "val": 20
+  },
+  "P95-4": {
+    "v1": 42,
+    "v0": null
+  },
+  "JI-1": 11.0,
+  "JI-2": 8.667,
+  "JI-3": null,
+  "LO-1": {
+    "pooled": 1.0,
+    "met": true
+  },
+  "AI-1": {
+    "t10": [5.0, 0.0],
+    "t20": [10.0, 0.0],
+    "t25": [10.0, 2.5]
+  },
+  "AI-2": {
+    "t_neg1": [0.0, 0.0],
+    "t31": [10.0, 5.0]
+  },
+  "AI-3": {
+    "t12": [5.0, 0.0],
+    "t24": [10.0, 0.0],
+    "t27": [10.0, 2.5]
+  },
+  "AI-4": {
+    "leg1_speed": 0.417,
+    "leg2_speed": 0.833,
+    "ok": true
+  },
+  "AI-5": {
+    "speed": 0.167,
+    "status": "CONFIRM_PATH"
+  },
+  "PB-1": {
+    "bins": [0, 0, 0, 1, 1, 2],
+    "medians": [-62.0, -68.0, -72.0]
+  },
+  "MT-1": {
+    "trimStart": 2.0
+  },
+  "WL-1": {
+    "crossings": 1,
+    "penalty": 3.0
+  },
+  "WL-2": {
+    "crossings": 0,
+    "penalty": 0.0
+  },
+  "WL-3": {
+    "crossings": 1,
+    "penalty": 8.0
+  },
+  "WL-4": {
+    "crossings": 0,
+    "penalty": 0.0
+  },
+  "WL-5": {
+    "crossings": 0,
+    "penalty": 0.0
+  },
+  "WL-6": {
+    "crossings": 1,
+    "penalty": 3.0
+  },
+  "WL-7": {
+    "crossings": 2,
+    "penalty": 5.5
+  },
+  "WL-8": {
+    "crossings": 1,
+    "nearWall": true
+  },
+  "WL-9": {
+    "crossings": 0,
+    "penalty": 0.0
+  },
+  "WL-10": {
+    "crossings": 0,
+    "penalty": 0.0
+  },
+  "GR-1": {
+    "g": 0.5,
+    "cols": 80,
+    "rows": 50,
+    "cells": 4000
+  },
+  "GR-2": {
+    "g": 0.903371,
+    "cols": 222,
+    "rows": 111,
+    "cells": 24642
+  },
+  "GR-3": {
+    "cols": 5,
+    "rows": 4,
+    "cells": 20
+  },
+  "GR-4": {
+    "p1": "inside",
+    "p2": "inside",
+    "p3": "outside"
+  },
+  "ID-1": -56.1538,
+  "ID-2": -53.6364,
+  "ID-3": -61.5294,
+  "ID-4": null,
+  "ID-5": -70.0,
+  "RR-1": {
+    "NN": [6, 6, 8],
+    "median": 6,
+    "R": 12,
+    "R_eff_office": 10,
+    "R_eff_smart_home": 12
+  },
+  "RR-2": {
+    "R_1m": 4,
+    "R_20m": 25,
+    "R_1sample": 25
+  },
+  "RR-3": {
+    "median": 4,
+    "R": 8
+  },
+  "PL-1": {
+    "c_neg100": "#D73027",
+    "c_neg55": "#1A9850",
+    "c_neg75": "#FEE08B"
+  },
+  "PL-2": {
+    "rgb": [200, 216, 118],
+    "hex": "#C8D876"
+  },
+  "PL-3": {
+    "rgb": [76, 175, 87],
+    "hex": "#4CAF57"
+  },
+  "PL-4": {
+    "rgb": [63, 172, 120],
+    "hex": "#3FAC78"
+  },
+  "PL-5": {
+    "bg_fee08b": "black",
+    "bg_d73027": "white"
+  },
+  "SO-1": -71.0,
+  "SO-2": -95.0,
+  "ST-1": true,
+  "ST-2": false,
+  "ST-3": false,
+  "ST-4": true,
+  "ST-5": false,
+  "ST-6": false,
+  "ST-7": false,
+  "ST-8": false,
+  "SE-1": {
+    "start": 0.0,
+    "end": 12.0,
+    "duration": 12.0,
+    "reason": "NON_QUALIFYING"
+  },
+  "SE-2": {
+    "start": 0.0,
+    "end": 9.5,
+    "ttr": 9.5,
+    "reason": "ROAM"
+  },
+  "SE-3": {
+    "opened": false
+  },
+  "PP-1": {
+    "t108": true,
+    "t110": true,
+    "t111": false
+  },
+  "VD-1": {
+    "coverage_met": true,
+    "p95_met": true,
+    "jitter_met": true,
+    "loss_met": true,
+    "worst_point_met": false,
+    "verdict": "FAIL",
+    "c": [925, -1, 480, 150, 10, 400, -1, 0]
+  },
+  "VD-2": {
+    "verdict": "INCOMPLETE"
+  },
+  "VD-3": {
+    "coverage_met": true,
+    "verdict": "PASS"
+  },
+  "VD-4": {
+    "coverage_met": false,
+    "display": "89.9",
+    "c_coverage": 899
+  },
+  "VD-5": {
+    "verdict": "NOT_ELIGIBLE",
+    "qr_vd": "N"
+  },
+  "VD-6": {
+    "case1_met": true,
+    "case2_met": false
+  },
+  "VD-7": {
+    "case1_met": true,
+    "case2_met": false
+  },
+  "QR-1": {
+    "worst_case_bytes": 380
+  },
+  "SC-1": {
+    "L_px": 721.11,
+    "mpp": 0.016641,
+    "uncertainty": 5.588,
+    "span_ok": true
+  },
+  "SC-2": {
+    "mpp": 0.02,
+    "uncertainty": 15.212
+  }
+}

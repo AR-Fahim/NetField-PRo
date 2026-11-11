@@ -1,0 +1,4 @@
+PREFLIGHT fa186882 model=vivo 1906 sdk=30 class=PHYSICAL
+PREFLIGHT wifi=enabled connected=yes
+PREFLIGHT location_mode=3 throttle_setting=0 wakefulness=Awake
+PREFLIGHT WIPE_WARNING app data of com.netfieldpro will be erased by tests (WIPE_OK=1 given)

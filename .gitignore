@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/core/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+app/src/gated/google-services.json
+google-services.json
+__pycache__/
+*.py[cod]
+
+

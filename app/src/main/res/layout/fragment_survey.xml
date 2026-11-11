@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nf_surface">
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/space_2"
+            android:paddingVertical="@dimen/space_1"
+            android:background="?attr/colorSurface">
+
+            <TextView
+                android:id="@+id/text_screen_title"
+                style="@style/TextAppearance.NF.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="?attr/colorOnSurface"
+                android:text="@string/screen_s07_title" />
+
+            <TextView
+                android:id="@+id/text_pin_count"
+                style="@style/TextAppearance.NF.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_2"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:text="@string/survey_pins_default" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_heatmap"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:minHeight="@dimen/touch_min"
+                android:text="@string/btn_view_heatmap" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_overflow"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:minHeight="@dimen/touch_min"
+                android:text="@string/overflow_icon"
+                android:textSize="20sp"
+                android:contentDescription="@string/action_end_survey" />
+
+            <View
+                android:id="@+id/action_end_survey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Read-only Banner (visible when session is FINALIZED or ENDED) -->
+        <TextView
+            android:id="@+id/banner_readonly"
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:paddingHorizontal="@dimen/space_2"
+            android:paddingVertical="@dimen/space_1"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:text="@string/survey_ended_readonly"
+            android:visibility="gone" />
+
+        <!-- Battery Alert Banner -->
+        <LinearLayout
+            android:id="@+id/banner_battery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/space_2"
+            android:paddingVertical="@dimen/space_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_battery_title"
+                style="@style/TextAppearance.NF.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/space_1">
+
+                <TextView
+                    android:id="@+id/text_battery_hint"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/space_2"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_battery_end"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/touch_min"
+                    android:text="@string/btn_battery_end"
+                    android:contentDescription="@string/btn_battery_end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Airplane Mode Banner -->
+        <TextView
+            android:id="@+id/banner_airplane"
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:textColor="@color/nf_error"
+            android:paddingHorizontal="@dimen/space_2"
+            android:paddingVertical="@dimen/space_1"
+            android:text="@string/banner_airplane"
+            android:visibility="gone" />
+
+        <!-- Plan View Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.netfieldpro.ui.plan.PlanView
+                android:id="@+id/plan_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:contentDescription="@string/screen_s07_title" />
+
+            <!-- Empty hint: Tap the plan to measure -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_empty_hint"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/text_empty_hint"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/space_3"
+                    android:paddingVertical="@dimen/space_2"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="@string/survey_empty_hint" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Capture Bottom Sheet Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sheet_capture"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        android:layout_marginHorizontal="@dimen/space_2"
+        android:layout_marginBottom="@dimen/space_2"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_3">
+
+            <TextView
+                android:id="@+id/text_capture_step"
+                style="@style/TextAppearance.NF.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/capture_step_default"
+                android:textColor="?attr/colorOnSurface" />
+
+            <ProgressBar
+                android:id="@+id/progress_capture"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:indeterminate="true" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_capture_cancel"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_min"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/space_2"
+                android:minHeight="@dimen/touch_min"
+                android:text="@string/btn_capture_cancel" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- WalkEveryEdgeTest buttons (for test edge traversal compatibility) -->
+    <LinearLayout
+        android:id="@+id/layout_walk_edges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|start"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_walk_s08"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/edge_to_s08" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_walk_s09"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/edge_to_s09" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

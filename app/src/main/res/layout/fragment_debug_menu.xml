@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_2">
+
+        <TextView
+            style="@style/TextAppearance.NF.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debug_menu_title" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/theme_system" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_theme_system"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/theme_system" />
+
+            <RadioButton
+                android:id="@+id/radio_theme_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/theme_light" />
+
+            <RadioButton
+                android:id="@+id/radio_theme_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/theme_dark" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_style_guide"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/row_style_guide" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_data_lab"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/row_data_lab" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_gate_lab"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/gatelab_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_plan_lab"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/debug_plan_lab_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_walk_all"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/row_walk_all" />
+
+        <TextView
+            android:id="@+id/text_build_info"
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:text="@string/next_screens_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_screens_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>
+

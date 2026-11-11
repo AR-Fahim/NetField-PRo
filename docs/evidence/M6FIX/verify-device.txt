@@ -1,0 +1,635 @@
+=== Launching AVD: Low_API30 headless (emulator-5554) ===
+INFO         | Android emulator version 37.1.11.0 (build_id 15917651) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath D:\Android\Sdk\system-images\android-30\google_apis\x86_64\
+WARNING      | Please update the emulator to one that supports the feature(s): Vulkan
+INFO         | Increasing RAM size to 2048MB
+INFO         | IPv4 server found: 192.168.0.1
+INFO         | Ignore IPv6 address: 10ed:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 10ed:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 10ed:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 28f3:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 28f3:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 28f3:b0ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 2801:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 2801:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 2801:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 4807:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 4807:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Ignore IPv6 address: 4807:b1ab:e602:0:10ed:b0ab:e602:0
+INFO         | Guest GLES Driver: Auto (ext controls)
+INFO         | emuglConfig_init: vulkan_mode_selected:lavapipe gles_mode_selected:swiftshader
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasCompatibleHypervisor
+INFO         |      Ok: Hypervisor compatibility to run avd: `Low_API30` are met
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `Low_API30` are met
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU compatibility checks are not required
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `Low_API30` are met
+WARNING      | FeatureControl is requesting a non existing feature.
+INFO         | Storing crashdata in: C:\Users\Fahim\AppData\Local\Temp\\AndroidEmulator\emu-crash-37.1.11.db, detection is enabled for process: 15908
+INFO         | Initializing gfxstream backend
+INFO         | startOpenglesRendererImpl: gpu info
+INFO         | GPU #1
+  Make: 1002
+  Model: AMD Radeon(TM) Graphics
+  Device ID: 164e
+
+INFO         | Disabling implicit Vulkan layers to avoid compatibility issues. Set VK_LOADER_LAYERS_DISABLE manually to disable this behavior.
+INFO         | initIcdPaths: ICD set to 'lavapipe', using Lavapipe ICD
+INFO         | Setting ICD filenames for the loader = D:\Android\Sdk\emulator\lib64\vulkan\lvp_icd.json
+INFO         | SharedLibrary::open for [D:\Android\Sdk\emulator\qemu\windows-x86_64\lib64\vulkan\vulkan-1.dll]
+INFO         | SharedLibrary::open for [D:\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll]
+INFO         | Added library: D:\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll
+INFO         | Selecting Vulkan device: llvmpipe (LLVM 21.1.2, 256 bits), Version: 1.4.318
+INFO         | Using Vulkan externalMemoryMode: HostAllocation for VkEmulation
+INFO         | Initializing VkEmulation features:
+INFO         |     glInteropSupported: false
+INFO         |     useDeferredCommands: true
+INFO         |     createResourceWithRequirements: true
+INFO         |     useVulkanComposition: false
+INFO         |     useVulkanNativeSwapchain: false
+INFO         |     enable guestRenderDoc: false
+INFO         |     ASTC LDR emulation mode: Gpu
+INFO         |     enable ETC2 emulation: true
+INFO         |     enable Ycbcr emulation: false
+INFO         |     guestVulkanOnly: false
+INFO         |     useDedicatedAllocations: false
+INFO         |     guestVulkanMaxApiVersion: 1.3.0
+INFO         |     enableProtectedMemoryEmulation: false
+INFO         | Graphics Adapter Vendor Google (Google Inc.)
+INFO         | Graphics Adapter Android Emulator OpenGL ES Translator (Google SwiftShader)
+INFO         | Graphics API Version OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)
+INFO         | Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_standard_derivatives GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 
+INFO         | Graphics Device Extensions N/A
+INFO         | Disabling sparse binding feature support
+INFO         | Userspace boot properties:
+INFO         |   android.bootanim=0
+INFO         |   android.qemud=1
+INFO         |   androidboot.boot_devices=pci0000:00/0000:00:03.0 pci0000:00/0000:00:06.0
+INFO         |   androidboot.hardware=ranchu
+INFO         |   androidboot.hardware.vulkan=ranchu
+INFO         |   androidboot.serialno=EMULATOR37X1X11X0
+INFO         |   androidboot.vbmeta.digest=fe75c2a5d8acc56679b9ff248d9bbb4830bcd72c5bca68461d9e9de20914a4e1
+INFO         |   androidboot.vbmeta.hash_alg=sha256
+INFO         |   androidboot.vbmeta.size=6144
+INFO         |   qemu=1
+INFO         |   qemu.avd_name=Low_API30
+INFO         |   qemu.camera_hq_edge_processing=0
+INFO         |   qemu.camera_protocol_ver=1
+INFO         |   qemu.dalvik.vm.heapsize=512m
+INFO         |   qemu.encrypt=1
+INFO         |   qemu.gles=1
+INFO         |   qemu.gltransport=pipe
+INFO         |   qemu.gltransport.drawFlushInterval=800
+INFO         |   qemu.hwcodec.avcdec=2
+INFO         |   qemu.hwcodec.hevcdec=2
+INFO         |   qemu.hwcodec.vpxdec=2
+INFO         |   qemu.opengles.version=131072
+INFO         |   qemu.settings.system.screen_off_timeout=2147483647
+INFO         |   qemu.skin=720x1280
+INFO         |   qemu.virtiowifi=1
+INFO         |   qemu.vsync=60
+WHPX on Windows 10.0.19045 detected.
+Windows Hypervisor Platform accelerator is operational
+netsimd I 11-10 05:47:40.563 external/netsim+/rust/daemon/src\rust_main.rs:93 - netsim artifacts path: "C:\\Users\\Fahim\\AppData\\Local\\Temp\\netsimd"
+netsimd I 11-10 05:47:40.563 external/netsim+/rust/daemon/src\rust_main.rs:96 - NetsimdArgs {
+    fd_startup_str: None,
+    no_cli_ui: true,
+    no_web_ui: true,
+    pcap: false,
+    disable_address_reuse: false,
+    hci_port: None,
+    connector_instance: None,
+    instance: None,
+    logtostderr: false,
+    dev: false,
+    forward_host_mdns: false,
+    vsock: None,
+    config: None,
+    host_dns: Some(
+        "192.168.0.1",
+    ),
+    http_proxy: None,
+    wifi_tap: None,
+    wifi: None,
+    test_beacons: false,
+    no_test_beacons: false,
+    no_shutdown: false,
+    verbose: false,
+    version: false,
+    debug: DebugArgs {
+        debug_no_traffic: false,
+        debug_no_network: false,
+        debug_no_wmedium: false,
+        debug_no_mdns_wmedium: false,
+        debug_no_guest_to_host_mdns: false,
+    },
+    rssi: None,
+}
+PREFLIGHT emulator-5554 model=sdk_gphone_x86_64 sdk=30 class=EMULATOR
+PREFLIGHT wifi=enabled connected=yes
+PREFLIGHT location_mode=3 throttle_setting=null wakefulness=Awake
+> Task :core:compileJava UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebugAndroidTest
+> Task :app:generateDebugAndroidTestResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebug UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:processDebugAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:dataBindingGenBaseClassesDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:processDebugAndroidTestResources
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:compileDebugAndroidTestJavaWithJavac
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+
+> Task :app:connectedDebugAndroidTest
+Starting 34 tests on Low_API30(AVD) - 11
+
+Low_API30(AVD) - 11 Tests 12/34 completed. (0 skipped) (0 failed)
+Low_API30(AVD) - 11 Tests 31/34 completed. (0 skipped) (0 failed)
+Low_API30(AVD) - 11 Tests 33/34 completed. (0 skipped) (0 failed)
+Finished 34 tests on Low_API30(AVD) - 11
+
+BUILD SUCCESSFUL in 58s
+68 actionable tasks: 28 executed, 40 up-to-date
+INFO         | Monitoring duration of emulator setup.
+INFO         | Successfully initialized netsim WiFi
+INFO         | Setting display: 0 configuration to: 720x1280, dpi: 320x320 
+INFO         | setDisplayActiveConfig: id:0, 720x1280
+INFO         | emulatorSetupEnvironment: Environment scene is not required
+INFO         | Loading snapshot 'default_boot'...
+INFO         | Successfully loaded snapshot 'default_boot' using 225 ms
+INFO         | Wait for emulator (pid 15908) 20 seconds to shutdown gracefully before kill;you can set environment variable ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL(in seconds) to change the default value (20 seconds)
+
+WARNING      | Not saving state: RAM not mapped as shared
+INFO         | Saving snapshot 'default_boot' using 0 ms
+WARNING      | Emulator client has not yet been configured.. Call configure me first!
+INFO         | removeAll
+WARNING      | Netsim Wifi dns:///localhost:51634 is gone due to Stream removed (CANCELLED)
+=== Launching AVD: High_API35 headless (emulator-5556) ===
+INFO         | Android emulator version 37.1.11.0 (build_id 15917651) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath D:\Android\Sdk\system-images\android-35\google_apis\x86_64\
+INFO         | Increasing RAM size to 4096MB
+INFO         | IPv4 server found: 192.168.0.1
+INFO         | Ignore IPv6 address: f0dc:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: f0dc:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: f0dc:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8e3:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8e3:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8e3:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8f1:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8f1:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 8f1:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 28f7:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 28f7:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Ignore IPv6 address: 28f7:90c6:3e01:0:f0dc:90c6:3e01:0
+INFO         | Guest GLES Driver: Auto (ext controls)
+INFO         | emuglConfig_init: vulkan_mode_selected:lavapipe gles_mode_selected:swiftshader
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasCompatibleHypervisor
+INFO         |      Ok: Hypervisor compatibility to run avd: `High_API35` are met
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `High_API35` are met
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU compatibility checks are not required
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `High_API35` are met
+INFO         | Storing crashdata in: C:\Users\Fahim\AppData\Local\Temp\\AndroidEmulator\emu-crash-37.1.11.db, detection is enabled for process: 17828
+INFO         | Initializing gfxstream backend
+INFO         | startOpenglesRendererImpl: gpu info
+INFO         | GPU #1
+  Make: 1002
+  Model: AMD Radeon(TM) Graphics
+  Device ID: 164e
+
+INFO         | Disabling implicit Vulkan layers to avoid compatibility issues. Set VK_LOADER_LAYERS_DISABLE manually to disable this behavior.
+INFO         | initIcdPaths: ICD set to 'lavapipe', using Lavapipe ICD
+INFO         | Setting ICD filenames for the loader = D:\Android\Sdk\emulator\lib64\vulkan\lvp_icd.json
+INFO         | SharedLibrary::open for [D:\Android\Sdk\emulator\qemu\windows-x86_64\lib64\vulkan\vulkan-1.dll]
+INFO         | SharedLibrary::open for [D:\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll]
+INFO         | Added library: D:\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll
+INFO         | Selecting Vulkan device: llvmpipe (LLVM 21.1.2, 256 bits), Version: 1.4.318
+INFO         | Using Vulkan externalMemoryMode: HostAllocation for VkEmulation
+INFO         | Initializing VkEmulation features:
+INFO         |     glInteropSupported: false
+INFO         |     useDeferredCommands: true
+INFO         |     createResourceWithRequirements: true
+INFO         |     useVulkanComposition: false
+INFO         |     useVulkanNativeSwapchain: false
+INFO         |     enable guestRenderDoc: false
+INFO         |     ASTC LDR emulation mode: Gpu
+INFO         |     enable ETC2 emulation: true
+INFO         |     enable Ycbcr emulation: false
+INFO         |     guestVulkanOnly: false
+INFO         |     useDedicatedAllocations: false
+INFO         |     guestVulkanMaxApiVersion: 1.3.0
+INFO         |     enableProtectedMemoryEmulation: false
+INFO         | Graphics Adapter Vendor Google (Google Inc.)
+INFO         | Graphics Adapter Android Emulator OpenGL ES Translator (Google SwiftShader)
+INFO         | Graphics API Version OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)
+INFO         | Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_standard_derivatives GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 
+INFO         | Graphics Device Extensions N/A
+INFO         | Disabling sparse binding feature support
+INFO         | Sending adb public key [QAAAAEvNaPadqysPc5MCLTlBkMJQzcmWUvE9ufXrmSIK3VqYIMm5pmGn4ReR+idpg93PgL06H0KVQaXBg0vWVcTJrI4jCcb2eQU6uVEM0UBnsSuuRrMWsEjAod206oYGVhSF68kJNB9TuOB6pPr2H5Z2vCWZUK2zxwRtjMtLwFd8pV10pgg4CqFtMxok1GOn9YQCk46bOAG3RjqWtqqKCCBz3FH1CEgrxT7uQD3qVjZ+UYkaFxHbaCHSDqrJoVu1Zp3WcbJZVVJ9nEs2rbMsA6OfapO6Oi2tiw1QwGgEbgcUUiPRHjFQetiwVeiwY0DyCC1WKO4vwbW4NRzL8LwGP2JJyHsx+ZKsXYxUNXluHxbLmfyjrOS2sPtoh2Rx4YD05nS/fjx5wyesYNWzXlN+a7a7dCi1RZizRPNain59gxcRgpp+bCcLpNJNTrCXn1t9tMT2XQEiJmdIm/gmuUEJINEvXoUst/PAdvDDOLIojGKLRCC5Jn6CD5SFqH4R1Mgw3BgpVhSwCPqH6sPCPiQwa+6S0z0j45C9Mb7tgzRUsNIyN7D2yTWJWwRfQwS+JLVn9MoffO19gzbtyQ6TFqZDPBgYGI/xW43mxEH6ro6CZA2u6TB0GIwn2ZoF1Eh3wXayl7R6llB6k9T2ylnKf8Ph7vdwq1mtq6ZpcKUL8YmxKSj11XR/eyGuggEAAQA= @unknown]
+INFO         | Userspace boot properties:
+INFO         |   androidboot.boot_devices=pci0000:00/0000:00:03.0 pci0000:00/0000:00:06.0
+INFO         |   androidboot.dalvik.vm.heapsize=576m
+INFO         |   androidboot.debug.hwui.renderer=skiagl
+INFO         |   androidboot.debug.sf.nobootanimation=1
+INFO         |   androidboot.hardware=ranchu
+INFO         |   androidboot.hardware.gltransport=pipe
+INFO         |   androidboot.hardware.vulkan=ranchu
+INFO         |   androidboot.logcat=*:V
+INFO         |   androidboot.opengles.version=196608
+INFO         |   androidboot.qemu=1
+INFO         |   androidboot.qemu.adb.pubkey=QAAAAEvNaPadqysPc5MCLTlBkMJQzcmWUvE9ufXrmSIK3VqYIMm5pmGn4ReR+idpg93PgL06H0KVQaXBg0vWVcTJrI4jCcb2eQU6uVEM0UBnsSuuRrMWsEjAod206oYGVhSF68kJNB9TuOB6pPr2H5Z2vCWZUK2zxwRtjMtLwFd8pV10pgg4CqFtMxok1GOn9YQCk46bOAG3RjqWtqqKCCBz3FH1CEgrxT7uQD3qVjZ+UYkaFxHbaCHSDqrJoVu1Zp3WcbJZVVJ9nEs2rbMsA6OfapO6Oi2tiw1QwGgEbgcUUiPRHjFQetiwVeiwY0DyCC1WKO4vwbW4NRzL8LwGP2JJyHsx+ZKsXYxUNXluHxbLmfyjrOS2sPtoh2Rx4YD05nS/fjx5wyesYNWzXlN+a7a7dCi1RZizRPNain59gxcRgpp+bCcLpNJNTrCXn1t9tMT2XQEiJmdIm/gmuUEJINEvXoUst/PAdvDDOLIojGKLRCC5Jn6CD5SFqH4R1Mgw3BgpVhSwCPqH6sPCPiQwa+6S0z0j45C9Mb7tgzRUsNIyN7D2yTWJWwRfQwS+JLVn9MoffO19gzbtyQ6TFqZDPBgYGI/xW43mxEH6ro6CZA2u6TB0GIwn2ZoF1Eh3wXayl7R6llB6k9T2ylnKf8Ph7vdwq1mtq6ZpcKUL8YmxKSj11XR/eyGuggEAAQA= @unknown
+INFO         |   androidboot.qemu.avd_name=High_API35
+INFO         |   androidboot.qemu.camera_hq_edge_processing=0
+INFO         |   androidboot.qemu.camera_protocol_ver=1
+INFO         |   androidboot.qemu.cpuvulkan.version=4206592
+INFO         |   androidboot.qemu.gltransport.drawFlushInterval=800
+INFO         |   androidboot.qemu.gltransport.name=pipe
+INFO         |   androidboot.qemu.hwcodec.avcdec=2
+INFO         |   androidboot.qemu.hwcodec.hevcdec=2
+INFO         |   androidboot.qemu.hwcodec.vpxdec=2
+INFO         |   androidboot.qemu.settings.system.screen_off_timeout=2147483647
+INFO         |   androidboot.qemu.skin=1440x3120
+INFO         |   androidboot.qemu.virtiowifi=1
+INFO         |   androidboot.qemu.vsync=60
+INFO         |   androidboot.serialno=EMULATOR37X1X11X0
+INFO         |   androidboot.vbmeta.digest=b3271ba499104f4631ae3723913d5c12574e01715fce5b82d60beed097ead264
+INFO         |   androidboot.vbmeta.hash_alg=sha256
+INFO         |   androidboot.vbmeta.size=6720
+INFO         |   androidboot.veritymode=enforcing
+WHPX on Windows 10.0.19045 detected.
+Windows Hypervisor Platform accelerator is operational
+netsimd I 11-10 05:48:48.746 external/netsim+/rust/daemon/src\rust_main.rs:93 - netsim artifacts path: "C:\\Users\\Fahim\\AppData\\Local\\Temp\\netsimd"
+netsimd I 11-10 05:48:48.746 external/netsim+/rust/daemon/src\rust_main.rs:96 - NetsimdArgs {
+    fd_startup_str: None,
+    no_cli_ui: true,
+    no_web_ui: true,
+    pcap: false,
+    disable_address_reuse: false,
+    hci_port: None,
+    connector_instance: None,
+    instance: None,
+    logtostderr: false,
+    dev: false,
+    forward_host_mdns: false,
+    vsock: None,
+    config: None,
+    host_dns: Some(
+        "192.168.0.1",
+    ),
+    http_proxy: None,
+    wifi_tap: None,
+    wifi: None,
+    test_beacons: false,
+    no_test_beacons: false,
+    no_shutdown: false,
+    verbose: false,
+    version: false,
+    debug: DebugArgs {
+        debug_no_traffic: false,
+        debug_no_network: false,
+        debug_no_wmedium: false,
+        debug_no_mdns_wmedium: false,
+        debug_no_guest_to_host_mdns: false,
+    },
+    rssi: None,
+}
+INFO         | Monitoring duration of emulator setup.
+INFO         | Successfully initialized netsim WiFi
+INFO         | Activated packet streamer for bluetooth emulation
+INFO         | Setting display: 0 configuration to: 1440x3120, dpi: 560x560 
+INFO         | setDisplayActiveConfig: id:0, 1440x3120
+INFO         | emulatorSetupEnvironment: Environment scene is not required
+INFO         | Loading snapshot 'default_boot'...
+WARNING      | Device 'cache' does not have the requested snapshot 'default_boot'
+
+WARNING      | Failed to load snapshot 'default_boot'
+USER_INFO    | The emulator is performing a cold boot without a saved state because there's no snapshot and you have configured it not to save on exit.
+INFO         | Boot completed in 18985 ms
+PREFLIGHT emulator-5556 model=sdk_gphone64_x86_64 sdk=35 class=EMULATOR
+PREFLIGHT wifi=enabled connected=no
+PREFLIGHT location_mode=3 throttle_setting=null wakefulness=Awake
+> Task :core:compileJava UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsDebugAndroidTest UP-TO-DATE
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :app:generateDebugAndroidTestResources UP-TO-DATE
+> Task :app:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebugAndroidTest UP-TO-DATE
+> Task :app:processDebugAndroidTestManifest UP-TO-DATE
+> Task :app:generateDebugAndroidTestBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :app:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :app:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:processDebugAndroidTestResources UP-TO-DATE
+> Task :app:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebug UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :app:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :app:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebugAndroidTest UP-TO-DATE
+> Task :app:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :app:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeProjectDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :app:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebugAndroidTest UP-TO-DATE
+> Task :app:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+
+> Task :app:connectedDebugAndroidTest
+Starting 34 tests on High_API35(AVD) - 15
+
+High_API35(AVD) - 15 Tests 5/34 completed. (0 skipped) (0 failed)
+High_API35(AVD) - 15 Tests 11/34 completed. (0 skipped) (0 failed)
+High_API35(AVD) - 15 Tests 19/34 completed. (0 skipped) (0 failed)
+High_API35(AVD) - 15 Tests 31/34 completed. (0 skipped) (0 failed)
+High_API35(AVD) - 15 Tests 33/34 completed. (0 skipped) (0 failed)
+Finished 34 tests on High_API35(AVD) - 15
+
+BUILD SUCCESSFUL in 1m 33s
+68 actionable tasks: 1 executed, 67 up-to-date
+INFO         | Increasing screen off timeout, logcat buffer size to 2M.
+INFO         | IPv4 server found: 192.168.0.1
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | IPv4 server found: 192.168.0.1
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | IPv4 server found: 192.168.0.1
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 1050:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2856:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 2864:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Ignore IPv6 address: 486a:39d7:3e01:0:1050:39d7:3e01:0
+INFO         | Wait for emulator (pid 17828) 20 seconds to shutdown gracefully before kill;you can set environment variable ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL(in seconds) to change the default value (20 seconds)
+
+WARNING      | Not saving state: RAM not mapped as shared
+INFO         | Saving snapshot 'default_boot' using 1 ms
+WARNING      | Emulator client has not yet been configured.. Call configure me first!
+pc_memory_init: above 4g size: 40000000
+INFO         | removeAll
+WARNING      | Netsim Wifi dns:///localhost:51774 is gone due to Stream removed (CANCELLED)
+PREFLIGHT fa186882 model=vivo 1906 sdk=30 class=PHYSICAL
+PREFLIGHT wifi=enabled connected=yes
+PREFLIGHT location_mode=3 throttle_setting=0 wakefulness=Awake
+PREFLIGHT WIPE_WARNING app data of com.netfieldpro will be erased by tests (WIPE_OK=1 given)
+> Task :core:compileJava UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsDebugAndroidTest UP-TO-DATE
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :app:generateDebugAndroidTestResources UP-TO-DATE
+> Task :app:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebugAndroidTest UP-TO-DATE
+> Task :app:processDebugAndroidTestManifest UP-TO-DATE
+> Task :app:generateDebugAndroidTestBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :app:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :app:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:processDebugAndroidTestResources UP-TO-DATE
+> Task :app:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebug UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :app:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :app:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebugAndroidTest UP-TO-DATE
+> Task :app:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :app:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeProjectDexDebugAndroidTest UP-TO-DATE
+> Task :app:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :app:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebugAndroidTest UP-TO-DATE
+> Task :app:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :app:connectedDebugAndroidTest
+Starting 34 tests on vivo 1906 - 11
+
+vivo 1906 - 11 Tests 5/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 10/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 17/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 24/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 30/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 31/34 completed. (0 skipped) (0 failed)
+vivo 1906 - 11 Tests 34/34 completed. (0 skipped) (0 failed)
+Finished 34 tests on vivo 1906 - 11
+
+BUILD SUCCESSFUL in 2m 10s
+68 actionable tasks: 1 executed, 67 up-to-date
+:core: tests 211 failures 0 errors 0 skipped 0
+:app (unit): tests 173 failures 0 errors 0 skipped 0
+HOST TOTAL: tests 384 failures 0 errors 0 skipped 0
+:app (device High_API35(AVD) - 15): tests 34 failures 0 errors 0 skipped 0
+:app (device Low_API30(AVD) - 11): tests 34 failures 0 errors 0 skipped 0
+:app (device vivo 1906 - 11): tests 34 failures 0 errors 0 skipped 0

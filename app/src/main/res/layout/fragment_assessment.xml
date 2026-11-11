@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nf_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_3">
+
+        <!-- Screen Title -->
+        <TextView
+            android:id="@+id/text_screen_title"
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_s15_title"
+            android:textColor="@color/nf_on_surface" />
+
+        <!-- Verdict Banner Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.NF.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_2">
+
+                <TextView
+                    android:id="@+id/text_verdict_badge"
+                    style="@style/TextAppearance.NF.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verdict_pass"
+                    android:textColor="@color/nf_on_surface" />
+
+                <TextView
+                    android:id="@+id/text_evidence_grade"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:text="@string/grade_verdict"
+                    android:textColor="@color/nf_on_surface_variant" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Criteria Table Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_1">
+
+            <TextView
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/header_criterion"
+                android:textColor="@color/nf_on_surface_variant" />
+
+            <TextView
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="@string/header_required"
+                android:textColor="@color/nf_on_surface_variant" />
+
+            <TextView
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/header_measured"
+                android:textColor="@color/nf_on_surface_variant" />
+
+            <TextView
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="@string/header_status"
+                android:textColor="@color/nf_on_surface_variant" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/nf_on_surface_variant" />
+
+        <!-- Criteria Rows List -->
+        <LinearLayout
+            android:id="@+id/layout_criteria_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/space_1" />
+
+        <!-- Key & Evidence Hashes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_key_fp"
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textColor="@color/nf_on_surface_variant" />
+
+            <TextView
+                android:id="@+id/text_evidence_sha"
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:typeface="monospace"
+                android:textColor="@color/nf_on_surface_variant" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_create_report"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/touch_min"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/space_1"
+                android:contentDescription="@string/btn_create_report"
+                android:minHeight="@dimen/touch_min"
+                android:text="@string/btn_create_report" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_heatmap"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/touch_min"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/space_1"
+                android:contentDescription="@string/btn_view_heatmap"
+                android:minHeight="@dimen/touch_min"
+                android:text="@string/btn_view_heatmap" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

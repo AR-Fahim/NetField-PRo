@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nf_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_3">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/text_screen_title"
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_s13_title"
+            android:textColor="@color/nf_on_surface" />
+
+        <TextView
+            android:id="@+id/text_finalize_header"
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:textColor="@color/nf_on_surface_variant" />
+
+        <!-- Requirements Check Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.NF.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_2">
+
+                <TextView
+                    android:id="@+id/text_check_boundary"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_boundary_missing"
+                    android:textColor="@color/nf_on_surface" />
+
+                <TextView
+                    android:id="@+id/text_check_points"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:text="@string/check_points_missing"
+                    android:textColor="@color/nf_on_surface" />
+
+                <TextView
+                    android:id="@+id/text_check_tier"
+                    style="@style/TextAppearance.NF.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:textColor="@color/nf_on_surface" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Warnings Card -->
+        <LinearLayout
+            android:id="@+id/layout_warnings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_warning_pins"
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/nf_on_surface_variant"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_warning_masked"
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:text="@string/warning_masked_high"
+                android:textColor="@color/nf_on_surface_variant"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_warning_grade"
+                style="@style/TextAppearance.NF.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:text="@string/warning_grade_indicative"
+                android:textColor="@color/nf_on_surface_variant"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Verdict Preview Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.NF.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3">
+
+            <TextView
+                android:id="@+id/text_verdict_preview"
+                style="@style/TextAppearance.NF.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_2"
+                android:text="@string/verdict_placeholder"
+                android:textColor="@color/nf_on_surface" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Progress and Status -->
+        <ProgressBar
+            android:id="@+id/progress_finalize"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_finalize_status"
+            style="@style/TextAppearance.NF.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:gravity="center"
+            android:textColor="@color/nf_on_surface_variant" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Hold to Finalize button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_hold_finalize"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_min"
+            android:layout_marginTop="@dimen/space_3"
+            android:contentDescription="@string/hold_to_finalize"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/hold_to_finalize" />
+
+    </LinearLayout>
+</ScrollView>

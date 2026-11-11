@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_2">
+
+        <TextView
+            style="@style/TextAppearance.NF.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_guide_title" />
+
+        <!-- Text Styles -->
+        <TextView
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/sample_title" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_display" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_title" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_body" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_label" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_caption" />
+
+        <TextView
+            style="@style/TextAppearance.NF.Mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/sample_mono" />
+
+        <!-- Monospace BSSID Sample -->
+        <TextView
+            android:id="@+id/text_bssid_sample"
+            style="@style/TextAppearance.NF.Mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/sample_bssid" />
+
+        <!-- Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sample_primary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="@string/btn_primary_56" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sample_outlined"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_min"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/btn_outlined_48" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sample_text"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/touch_min"
+            android:minWidth="@dimen/touch_min"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/btn_text" />
+
+        <!-- Card Sample -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.NF.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2">
+
+            <TextView
+                style="@style/TextAppearance.NF.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_2"
+                android:text="@string/card_sample_title" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Verdict Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_verdict_pass"
+                style="@style/Widget.NF.Chip.Verdict.Pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/verdict_pass" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_verdict_fail"
+                style="@style/Widget.NF.Chip.Verdict.Fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/verdict_fail" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_verdict_incomplete"
+                style="@style/Widget.NF.Chip.Verdict.Incomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/verdict_incomplete" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_verdict_not_eligible"
+                style="@style/Widget.NF.Chip.Verdict.NotEligible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/touch_min"
+                android:minWidth="@dimen/touch_min"
+                android:text="@string/verdict_not_eligible" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Lock Badges -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/badge_pro"
+                style="@style/TextAppearance.NF.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_background"
+                android:paddingStart="@dimen/space_1"
+                android:paddingEnd="@dimen/space_1"
+                android:paddingTop="@dimen/space_050"
+                android:paddingBottom="@dimen/space_050"
+                android:text="@string/badge_pro"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <TextView
+                android:id="@+id/badge_enterprise"
+                style="@style/TextAppearance.NF.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2"
+                android:background="@drawable/badge_background"
+                android:paddingStart="@dimen/space_1"
+                android:paddingEnd="@dimen/space_1"
+                android:paddingTop="@dimen/space_050"
+                android:paddingBottom="@dimen/space_050"
+                android:text="@string/badge_enterprise"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+        </LinearLayout>
+
+        <!-- Color Swatches Container -->
+        <LinearLayout
+            android:id="@+id/layout_color_swatches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>

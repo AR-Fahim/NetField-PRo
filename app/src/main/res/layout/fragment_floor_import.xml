@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_2">
+
+        <TextView
+            android:id="@+id/text_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_s04_title"
+            android:textAppearance="@style/TextAppearance.NF.Title"
+            android:textColor="@color/nf_on_surface"
+            android:layout_marginBottom="@dimen/space_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pick_file"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:minHeight="@dimen/touch_primary"
+            android:text="@string/import_pick" />
+
+        <TextView
+            android:id="@+id/text_import_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:text="@string/import_hint"
+            android:textAppearance="@style/TextAppearance.NF.Body"
+            android:textColor="@color/nf_on_surface_variant" />
+
+        <TextView
+            android:id="@+id/text_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:textAppearance="@style/TextAppearance.NF.Body"
+            android:textColor="@color/nf_error"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/layout_preview_container"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="@dimen/space_2"
+            android:visibility="gone">
+
+            <com.netfieldpro.ui.plan.PlanView
+                android:id="@+id/plan_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_floor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:hint="@string/import_floor_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_floor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_floor_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:hint="@string/import_level">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_floor_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="numberSigned" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/touch_primary"
+            android:minHeight="@dimen/touch_primary"
+            android:layout_marginTop="@dimen/space_2"
+            android:enabled="false"
+            android:text="@string/import_save" />
+
+    </LinearLayout>
+
+</ScrollView>

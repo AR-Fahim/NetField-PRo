@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="nf_entitlement.xml"/>
+    <exclude domain="sharedpref" path="nf_onboarding.xml"/>
+    <exclude domain="sharedpref" path="nf_session_runtime.xml"/>
+    <exclude domain="sharedpref" path="FirebaseHeartBeatW0RFRkFVTFRd+MTo5NjE5MTI0Nzk4NTE6YW5kcm9pZDpmZmZlNGRlMzM1OGQ5ZDQ2ZWYxMTJl.xml"/>
+</full-backup-content>
